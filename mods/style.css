@@ -1,0 +1,109 @@
+.head {
+  gap: 2rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+
+  &.mobile {
+    display: none;
+  }
+
+  & .btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    display: grid;
+    place-items: center;
+  }
+}
+
+.mobile-top {
+  width: 100%;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+
+  &>span {
+    display: inline-block;
+  }
+}
+
+.subtitle {
+  margin: 0.5rem 0;
+  text-align: center;
+
+  &>span {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+
+  &>div:first-child {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 3px;
+
+    &>div {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      &>svg{
+        width: 21px;
+      }
+    }
+  }
+
+  &>div:last-child {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+}
+
+@media (max-aspect-ratio: 2/3) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .head.mobile {
+    gap: 0.5rem;
+    display: flex;
+
+    &>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+  }
+
+  .title {
+    text-align: end;
+  }
+
+  .subtitle {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+
+    &>span {
+      font-size: 3.5vw;
+    }
+  }
+}
