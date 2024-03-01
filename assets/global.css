@@ -32,6 +32,7 @@ h1 {
   max-width: 800px;
   padding: 50px 1rem 0 1rem;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 button,
@@ -54,6 +55,15 @@ button:active,
 .btn:active {
   scale: .95;
   filter: brightness(.8);
+}
+
+.clickable{
+  transition: scale 0.05s ease-in-out;
+  cursor: pointer;
+
+  &:active{
+    scale: 0.95;
+  }
 }
 
 .mobile {

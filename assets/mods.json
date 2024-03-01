@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "client": "Fabric 1.20.4",
+  "mimo": "gay",
+  "mods": [
+    {
+      "id": "P7dR8mSH",
+      "description": "패브릭 모드들을 구동시키기 위해서 반드시 필요한 API 모드입니다."
+    },
+    {
+      "id": "fM515JnW",
+      "description": "바이옴, 환경마다 각각 다른 배경음을 넣어줍니다.\n새로운 바이옴을 추가해주는 모드들과의 호환성도 뛰어납니다.",
+      "libs": [
+        "CreativeCore"
+      ],
+      "fix": true
+    },
+    {
+      "id": "OsZiaDHq",
+      "description": "CreativeMD의 모드들을 구동하기 위해 필요한 라이브러리 모드입니다."
+    },
+    {
+      "id": "HVnmMxH1",
+      "description": "최적화, 바닐라틱함 둘 다 살려 삼김이 현재 사용중인 셰이더팩입니다.",
+      "type": "shader"
+    },
+    {
+      "id": "50dA9Sha",
+      "description": "sustal"
+    }
+  ]
+}
