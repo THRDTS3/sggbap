@@ -31,6 +31,10 @@
       "description": "CreativeMD의 모드들을 구동하기 위해 필요한 라이브러리 모드입니다."
     },
     {
+      "id": "mOgUt4GM",
+      "description": "whotf not use modmenu smh"
+    },
+    {
       "id": "HVnmMxH1",
       "description": "최적화, 바닐라틱함 둘 다 살려 삼김이 현재 사용중인 셰이더팩입니다.",
       "type": "shader"
