@@ -55,6 +55,7 @@ function createList(data) {
 
     let badges = [];
     if (x.id == 'P7dR8mSH') badges.push('star');
+    if (x.id == 'mOgUt4GM') badges.push('star');
     else {
       if (x.categories.includes('library')) badges.push('lib');
       if (x.info.fix) badges.push('fix');
