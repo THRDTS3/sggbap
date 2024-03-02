@@ -7,7 +7,7 @@ const elem = (type) => document.createElement(type);
 
   applyText('pack-version', `Samgim Survival ${data.version}v`);
   applyText('client-version', data.client);
-  applyText('mod-count', `총 ${data.mods.length}개의 프로젝트`);
+  applyText('mod-count', `${data.mods.length} Projects in total`);
 
   let ids = data.mods.map(x => `"${x.id}"`).join(',');
   let infoReq = await fetch(`https://api.modrinth.com/v2/projects?ids=[${ids}]`);
