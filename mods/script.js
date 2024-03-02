@@ -5,7 +5,7 @@ const elem = (type) => document.createElement(type);
   let req = await fetch('/assets/mods.json');
   const data = await req.json();
 
-  applyText('pack-version', `Samgim Survival ${data.version}v`);
+  applyText('pack-version', `Samgim Modpack ${data.version}v`);
   applyText('client-version', data.client);
   applyText('mod-count', `${data.mods.length} Projects in total`);
 
