@@ -112,6 +112,16 @@
       "description": "마인크래프트 로딩 화면의 붉은 화면을 눈이 편안한 어두운 색상으로 바꿔주는 모드입니다."
     },
     {
+      "_comment": "DarkTitleBar",
+      "id": "h3XWIuzM",
+      "description": "마인크래프트 윈도우 바를 어두운 색상으로 바꿔주는 모드입니다."
+    },
+    {
+      "_comment": "Debugify",
+      "id": "h3XWIuzM",
+      "description": "마인크래프트 윈도우 바를 어두운 색상으로 바꿔주는 모드입니다."
+    },
+    {
       "id": "mOgUt4GM",
       "description": "whotf not use modmenu smh"
     },
