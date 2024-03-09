@@ -1,12 +1,10 @@
 <svg width="3400" height="500" viewBox="0 0 3400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_4_34)">
-<rect x="700" width="100" height="500" fill="white"/>
-<rect x="1900" width="400" height="100" fill="white"/>
-<rect x="800" y="200" width="200" height="100" fill="white"/>
+<path d="M700 -0.5H800V200H1000V300H800V499.5H700V-0.5Z" fill="white"/>
 <rect x="1250" y="50" width="400" height="400" stroke="white" stroke-width="100"/>
 <rect x="2950" y="50" width="400" height="400" stroke="white" stroke-width="100"/>
 <rect x="2600" width="100" height="500" fill="white"/>
-<rect x="2300" width="100" height="500" fill="white"/>
+<path d="M2299.5 0H2399.5V500H2299.5V100H1900V0H2299.5Z" fill="white"/>
 <path d="M276.834 210.085L249.998 156.406L223.166 210.087L93.2479 470H48.541L250 67.082L451.459 470H406.774L276.834 210.085Z" stroke="white" stroke-width="60"/>
 </g>
 <defs>
