@@ -15,6 +15,13 @@ const elem = (type) => document.createElement(type);
   info.forEach(x => {
     x.info = data.mods.filter(m => m.id == x.id)[0];
   });
+  data.mods.filter(x => !x.id).map(x => ({ info: x })).forEach(x => {
+    info.push(x);
+  });
+
+  info = info.map(processData)
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .sort((a, b) => a.ordinal - b.ordinal);
 
   let mods = createList(info);
   $('main').append(mods);
@@ -39,7 +46,7 @@ function createList(data) {
     img.className = 'clickable';
     img.draggable = false;
     img.onclick = () => {
-      nav(x.id);
+      nav(x.id, x.link);
     };
     imgWrapper.append(img);
 
@@ -50,20 +57,20 @@ function createList(data) {
     title.textContent = x.title;
     title.className = 'clickable';
     title.onclick = () => {
-      nav(x.id);
+      nav(x.id, x.link);
     };
 
     let badges = [];
     if (x.id == 'P7dR8mSH' || x.id == 'mOgUt4GM') badges.push('star');
     else {
       if (x.categories.includes('library')) badges.push('lib');
-      if (x.info.fix) badges.push('fix');
+      if (x.fix) badges.push('fix');
     }
 
-    head.append(title, createBadges(badges, x.info.libs));
+    head.append(title, createBadges(badges, x.libs));
 
     let body = elem('p');
-    body.textContent = x.info.description;
+    body.textContent = x.description;
 
     let type = elem('span');
     type.textContent = x.project_type;
@@ -76,6 +83,21 @@ function createList(data) {
     mods.append(container);
   });
   return mods;
+}
+
+function processData(x) {
+  return {
+    icon_url: x.icon_url || x.info.icon,
+    id: x.id,
+    link: x.info.link,
+    title: x.title || x.info.name,
+    categories: x.categories ?? (x.info.lib ? ['library'] : []),
+    fix: x.info.fix,
+    libs: x.info.libs,
+    description: x.info.description,
+    project_type: x.project_type || x.info.type,
+    ordinal: x.info.ordinal || Number.MAX_VALUE
+  }
 }
 
 function createBadges(list, libs) {
@@ -97,7 +119,7 @@ function createBadges(list, libs) {
   return div;
 }
 
-function nav(id) {
-  let link = `https://modrinth.com/project/${id}`;
+function nav(id, link) {
+  if (id) link = `https://modrinth.com/project/${id}`;
   window.open(link, '_blank');
 }
